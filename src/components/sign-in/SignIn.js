@@ -22,7 +22,6 @@ const SignIn = () => {
     const handleChange = async e => {
       const {value, name} = e.target;
       setState(prevState => ({...prevState,[name]:value}));
-      console.log(state);
     }  
 
     return (
@@ -47,8 +46,10 @@ const SignIn = () => {
           label='password'
           handleChange={handleChange}/>
  
-          <CustomButton type='submit' value='Submit form'>Sign In</CustomButton>
-          <CustomButton onClick={signInWithGoogle}>Sign In with Google</CustomButton>
+          <div className="buttons">
+            <CustomButton type='submit' value='Submit form' >Sign In</CustomButton>
+            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>Sign In with Google</CustomButton>
+          </div>
           
         </form>
       </div>
