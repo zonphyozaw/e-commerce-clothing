@@ -5,7 +5,7 @@ import FormInput from '../form-input/FormInput';
 
 import './SignIn.scss';
 import CustomButton from '../custom-button/CustomButton';
-
+import {signInWithGoogle} from '../../firebase/FirebaseUtils';
 
 
 const SignIn = () => {
@@ -39,7 +39,6 @@ const SignIn = () => {
           label='email'
           handleChange={handleChange}/>
           
-
           <FormInput 
           name='password'
           type='password'
@@ -48,8 +47,9 @@ const SignIn = () => {
           label='password'
           handleChange={handleChange}/>
  
-
           <CustomButton type='submit' value='Submit form'>Sign In</CustomButton>
+          <CustomButton onClick={signInWithGoogle}>Sign In with Google</CustomButton>
+          
         </form>
       </div>
     )

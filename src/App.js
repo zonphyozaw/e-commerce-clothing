@@ -7,7 +7,7 @@ import HomePage from "./pages/homepage/homepage.component";
 import ShopComponent from "./pages/shop/ShopComponent";
 import HeaderComponent from "./components/header-component/HeaderComponent";
 import Auth from "./pages/auth/Auth";
-
+import { auth } from './firebase/FirebaseUtils';
 
 
 
