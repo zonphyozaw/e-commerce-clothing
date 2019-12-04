@@ -12,8 +12,6 @@ import Auth from "./pages/auth/Auth";
 import { auth, createUserProfileDocument } from './firebase/FirebaseUtils';
 
 export class App extends Component {
-
-
   constructor(){
     super();
 
@@ -36,7 +34,7 @@ export class App extends Component {
             }
           })
         });
-        console.log(this.sate);
+        console.log(this.state);
       }
 
       this.setState({currentUser: userAuth });
@@ -64,5 +62,3 @@ export class App extends Component {
 
 export default App
 
-
-//14 start
