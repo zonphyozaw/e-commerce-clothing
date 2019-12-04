@@ -34,13 +34,10 @@ export class App extends Component {
             }
           })
         });
-    
       }
-
       this.setState({currentUser: userAuth });
     });
   }
-
   componentWillUnmount(){
     this.unsubscribeFromAuth();
   }
@@ -61,4 +58,6 @@ export class App extends Component {
 }
 
 export default App
+
+//folder 8 file 4:
 
