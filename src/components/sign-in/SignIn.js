@@ -5,7 +5,7 @@ import FormInput from '../form-input/FormInput';
 
 import './SignIn.scss';
 import CustomButton from '../custom-button/CustomButton';
-import {signInWithGoogle} from '../../firebase/FirebaseUtils';
+import { auth ,signInWithGoogle} from '../../firebase/FirebaseUtils';
 
 
 const SignIn = () => {
@@ -16,7 +16,13 @@ const SignIn = () => {
 
     const handleSubmit = async e => {
        e.preventDefault();
-       setState({email:'', password:''});
+       const {email, password} = state;
+       try {
+         await auth.signInWithEmailAndPassword(email,password);
+         setState({email:'', password:''});
+         } catch (err) {
+         console.log(err);
+       }
     }
 
     const handleChange = async e => {
