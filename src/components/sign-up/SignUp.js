@@ -51,7 +51,6 @@ function SignUp() {
       <form className='sign-up-form' onSubmit={handleSubmit}>
       
       <FormInput 
-      className='' 
       type='text' 
       value={state.displayName} 
       onChange={handleChange} 
@@ -60,16 +59,15 @@ function SignUp() {
       required/>
 
       <FormInput 
-      className='' 
       type='email' 
       value={state.email} 
       onChange={handleChange} 
       name='email'
       label='email'
       required/>
-      
+
+           
       <FormInput 
-      className='' 
       type='password' 
       value={state.password} 
       onChange={handleChange} 
@@ -78,7 +76,6 @@ function SignUp() {
       required/>
 
       <FormInput 
-      className='' 
       type='password' 
       value={state.confirmPassword} 
       onChange={handleChange} 
