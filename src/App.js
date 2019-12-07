@@ -42,7 +42,7 @@ export class App extends Component {
         <HeaderComponent/>
         <Switch>
           <Route exact path="/" component={HomePage}/>
-          <Route path="/shops" component={ShopComponent}/>
+          <Route path="/shop" component={ShopComponent}/>
           {/* <Route path="/checkout" component={CheckOutPage}/> */}
           <Route path="/auth" render={()=> this.props.currentUser ? <Redirect to='/'/>:<Auth/>}/>
         </Switch>
