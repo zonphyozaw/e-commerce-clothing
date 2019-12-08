@@ -12,6 +12,12 @@ import HeaderComponent from "./components/header-component/HeaderComponent";
 import Auth from "./pages/auth/Auth";
 import { auth, createUserProfileDocument } from './firebase/FirebaseUtils';
 import {setCurrentUser} from './redux/user/UserActions';
+import { selectCurrentUser } from './redux/user/UserSelectors';
+import { createStructuredSelector } from 'reselect';
+import CheckOut from './pages/checkout/CheckOut';
+
+
+
 
 export class App extends Component {
  
@@ -43,7 +49,7 @@ export class App extends Component {
         <Switch>
           <Route exact path="/" component={HomePage}/>
           <Route path="/shop" component={ShopComponent}/>
-          {/* <Route path="/checkout" component={CheckOutPage}/> */}
+          <Route path="/checkout" component={CheckOut}/>
           <Route path="/auth" render={()=> this.props.currentUser ? <Redirect to='/'/>:<Auth/>}/>
         </Switch>
       </div>
@@ -51,8 +57,8 @@ export class App extends Component {
   }
 }
 
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
 })
 
 const mapDispatchToProps = (dispatch) => ({
@@ -61,5 +67,5 @@ const mapDispatchToProps = (dispatch) => ({
 
 export default connect(mapStateToProps,mapDispatchToProps)(App);
 
-
+// folder 8 video 24
 
