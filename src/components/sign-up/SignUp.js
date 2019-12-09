@@ -43,7 +43,6 @@ function SignUp() {
   }
 
 
-  const { displayName, email, password, confirmPassword } = state;
   return (
     <div className='sign-up'>
       <h2 className='title'>I do not have a account</h2>
