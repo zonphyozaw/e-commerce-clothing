@@ -67,5 +67,5 @@ const mapDispatchToProps = (dispatch) => ({
 
 export default connect(mapStateToProps,mapDispatchToProps)(App);
 
-// folder 8 video 30
+// folder 11 finished
 
