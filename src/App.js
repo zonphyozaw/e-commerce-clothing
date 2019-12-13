@@ -67,5 +67,5 @@ const mapDispatchToProps = (dispatch) => ({
 
 export default connect(mapStateToProps,mapDispatchToProps)(App);
 
-// folder 11 finished
+// start from 12
 
